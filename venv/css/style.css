@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+*{
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+    color: black;
+
+}
+body{
+    background: url(./csgo.jpg);
+}
+p{
+    padding: 20px;
+}
+h1{
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+}
+.cards{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+.card{
+    width: 500px;
+    height: 700px;
+    /* box-shadow: 0px 0px 5px rgb(68, 67, 67);
+    border-radius: 30px; */
+}
+form{
+    display: grid;
+    margin: 30px;
+}
+.btn1{
+    background-color: #000000;
+    box-shadow: 0px 0px 7px rgb(200, 200, 200);
+    font-size: 0.8rem;
+    border: none;
+    margin-top: 10px;
+    border-radius: 20px;
+    color: #fff;
+    padding: 10px 30px 10px 30px;
+    margin: 2rem;
+}
+span{
+    color: brown;
+}
