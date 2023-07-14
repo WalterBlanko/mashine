@@ -20,7 +20,8 @@ def make_post_request(url, data):
     except requests.exceptions.RequestException as e:
         print("Error en la solicitud POST:", e)
 
-url = 'https://fastfoodapi.herokuapp.com/predict'
+# url = 'https://fastfoodapi.herokuapp.com/predict'
+url = 'http://localhost:8100/predict'
 
 @app.route("/")
 def home():
