@@ -10,7 +10,7 @@
 
 }
 body{
-    background: url(./csgo.jpg);
+    background: url(../img/csgo.jpg);
 }
 p{
     padding: 20px;
@@ -29,6 +29,7 @@ h1{
 .card{
     width: 500px;
     height: 700px;
+    opacity: 90%;
     /* box-shadow: 0px 0px 5px rgb(68, 67, 67);
     border-radius: 30px; */
 }
