@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predicción de asesinatos en CS:GO</title>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var matchKillsInput = document.getElementById('MatchKills');
+            var matchHeadshotsInput = document.getElementById('MatchHeadshots');
+
+            // Validar el valor de MatchHeadshots en tiempo real
+            matchHeadshotsInput.addEventListener('input', function() {
+                var matchKills = parseInt(matchKillsInput.value);
+                var matchHeadshots = parseInt(matchHeadshotsInput.value);
+
+                if (matchHeadshots > matchKills) {
+                    matchHeadshotsInput.value = matchKills;
+                }
+            });
+
+            // Validar el valor de MatchKills en tiempo real
+            matchKillsInput.addEventListener('input', function() {
+                var matchKills = parseInt(matchKillsInput.value);
+                var matchHeadshots = parseInt(matchHeadshotsInput.value);
+
+                if (matchHeadshots > matchKills) {
+                    matchHeadshotsInput.value = matchKills;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Predicción de asesinatos en CS:GO</h1>
+
+    <form action="/predecir" method="POST">
+        <label for="MatchKills">MatchKills:</label>
+        <input type="range" id="MatchKills" name="MatchKills" min="0" max="20" step="1" value="0">
+        <br><br>
+
+        <label for="MatchAssists">MatchAssists:</label>
+        <input type="range" id="MatchAssists" name="MatchAssists" min="0" max="20" step="1" value="0">
+        <br><br>
+
+        <label for="MatchHeadshots">MatchHeadshots:</label>
+        <input type="range" id="MatchHeadshots" name="MatchHeadshots" min="0" max="20" step="1" value="0">
+        <br><br>
+
+        <label for="Map">Mapa:</label>
+        <select id="Map" name="Map">
+            <option value="1">de_dust2</option>
+            <option value="2">de_inferno</option>
+            <option value="3">de_mirage</option>
+            <option value="4">de_nuke</option>
+        </select>
+        <br><br>
+
+        <label for="InternalTeamId">Equipo:</label>
+        <select id="InternalTeamId" name="InternalTeamId">
+            <option value="1">Equipo 1</option>
+            <option value="2">Equipo 2</option>
+        </select>
+        <br><br>
+
+        <label for="Email">Correo electrónico:</label>
+        <input type="email" id="Email" name="Email" required>
+        <br><br>
+
+        <input type="submit" value="Predecir">
+    </form>
+</body>
+</html>
